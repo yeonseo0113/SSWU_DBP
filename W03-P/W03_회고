@@ -1,0 +1,62 @@
+## 새로 배운 내용
+* 보안 문제 및 방지 대책 이해
+    사용자가 입력한 정보는 일단 신뢰하지 않음 --> 검증 후 저장
+* ###SQL Injection
+: 임의의 SQL문을 주입하고 실행하게 하여 DB가 비정상적인 동작을 하는 행위
+
+--> 입력 값을 문자열로 인식하여 공격쿼리가 들어가도 의미없는 단순 문자열로 처리
+```
+mysqli_real_escape_string() // 인자로 들어온 데이터 중, SQL을 주입하는 공격에 사용될 수 있는 기호 -> 문자
+```
+----
+- ##UPDATE
+```
+어떤 특정한 주제를 선택 -> 수정 // create를 눌렀을 때와 같은 화면, 내용 수정
+$query = "
+    UPDATE topic
+        SET
+            title = '{$filtered['title']}',
+            description = '{$filtered['description']}'
+        WHERE
+            id = '{$filtered['id']}'
+";
+```
+---
+- ##DELETE
+```
+어떤 특정한 주제를 선택 -> 삭제, 안전을 위해 submit과 같은 버튼
+
+$query = "
+  DELETE
+    FROM topic
+    WHERE id = {$filtered['id']}
+";
+
+
+$delete_link = '
+  <form action="process_delete.php" method="POST">
+    <input type="hidden" name="id" value="'.$_GET['id'].'">
+    <input type="submit" value="delete">
+  </form>
+  ';
+```
+## 문제, 해결과정
+```
+깃허브랑 아톰이랑 연동해서 한 번에 파일을 올리려다 뭐가 잘못됐는지 올렸던 파일들이 다 사라져버렸다,,,^^,,,,,,,
+merge어쩌구가 뜬 걸 보니 저번주 파일들과 합쳐진 것 같은데 일단 내가 폴더 자체를 push한 게 아니라 각 파일들을
+push했었다,,, remove도 확실히 해주어야 한다..!
+```
+
+##참고 사이트
+```
+깃허브
+<https://www.youtube.com/watch?v=GaKjTjwcKQo>
+<https://rogerdudler.github.io/git-guide/index.ko.html>
+
+## 회고
+* (+) : 오늘은 저번주보다 새로 접하는 내용이 적어서 그런지 더 편하게 들을 수 있었다!!
+- (-) : 이번 주도 아직은 힘들지 않다,,!
++ (!) : 강제로 push하지 말고,,,삭제도 막 하지말자,,,
+
+## 과제링크
+<https://drive.google.com/drive/folders/1wIdvNANDJQQeb9sqv27sPT3ghRjR2l0g?usp=sharing>
