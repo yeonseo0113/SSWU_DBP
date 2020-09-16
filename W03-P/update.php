@@ -28,10 +28,10 @@
  <html>
    <head>
      <meta charset="utf-8">
-     <title>DATABASE</title>
+     <title>MY COLOR</title>
    </head>
    <body>
-     <h1><a href="index.php">DATABASE</a></h1>
+     <h1><a href="index.php">MY COLOR</a></h1>
      <ol><?= $list ?></ol>
      <form action="process_update.php" method="POST">
        <input type="hidden" name="id" value="<?= $_GET['id'] ?>">
