@@ -9,7 +9,7 @@
 
   $article = array(
     'title' => 'Welcome',
-    'description' => 'Database is ...'
+    'description' => 'COLOR is ...'
   );
 
   if( isset($_GET['id'])) {
