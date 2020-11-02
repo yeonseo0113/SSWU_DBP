@@ -102,3 +102,8 @@ $query2 = "SELECT country.Name as Country, json_unquote(json_extract(doc,'$.demo
 ```
 📼 동작 영상
 <https://drive.google.com/drive/folders/1wIdvNANDJQQeb9sqv27sPT3ghRjR2l0g?usp=sharing>
+1. k로 시작하는 나라들 정보 출력
+2. 특정 나라(south korea)에 대한 정보 출력
+3. south korea의 head 수정 후 수정 결과(김대중 -> 문재인) 출력
+4. 대륙별 나라 조회 -> 아프리카 대륙의 나라들 출력
+5. south korea와 전세계 평균 기대수명, 인구 수 비교
